@@ -1,17 +1,33 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <br><br>
+  <div class = "container">
+        <div class = "row">
+          <div class ="col-md-6 col-xs-2">
+          <img src = "https://media-exp1.licdn.com/dms/image/C5603AQEGMUeOp6d-xA/profile-displayphoto-shrink_400_400/0/1609160828062?e=1620259200&v=beta&t=xbqrn0HwVCdQBPRbFDTzebbiPw6lqdus8ZNbVzmLl-k">
+            </div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+          <div class = "col-md-6 col-xs-2">
+            <h2>I AM NICHOLAS SOH</h2>
+            <P>Hey there!</P>
+            <p>I am currently a Second-Year Student in Temasek Polytechnic pursuing the course of Financial Business Informatics.
+              During my course of studies, I have take up various modules which allowed me to gain a wealth of experience in developing
+              applications.
+            </p>
+            <p>I aspire to be in the technology industry where I can develop applications and contribute to an organization. With that, do feel free to browse around my portfolio!</p>
+            <h4>
+              Find me on:
+              <br>
+              <ion-button (click) = "openLinkedin()" class = "button">
+              <ion-icon name = "logo-linkedin" class = "linkedinLogo"></ion-icon>
+              </ion-button>
+              <ion-button (click) = "openIg()" class = "button">
+              <ion-icon name = "logo-instagram" class = "linkedinLogo"></ion-icon>
+              </ion-button>
+              <ion-button (click) = "openFb()" class = "button">
+              <ion-icon name = "logo-facebook" class = "linkedinLogo"></ion-icon>
+              </ion-button>
+            </h4>
+          </div>
+        </div>
+  </div>
 </ion-content>
