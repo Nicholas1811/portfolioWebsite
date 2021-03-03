@@ -1,3 +1,20 @@
 ion-content{
     --background: #121212;
 }
+ion-input{
+    --background: white;
+    --color: #202020;
+    border-radius: 10px;
+}
+ion-fab-button{
+    --background: beige;
+}
+
+ion-icon{
+    background-color: beige;
+    font-size: 20px;
+}
+ion-textarea{
+    --placeholder-color: gray;
+    --color: #202020;
+}

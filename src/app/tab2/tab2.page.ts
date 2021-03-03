@@ -10,7 +10,7 @@ export class Tab2Page {
 
   constructor(private router: Router) {}
 projectItem(str){
-  this.router.navigate(['/tabs/Portfolio/project-item'])
+  this.router.navigate(['/Portfolio/project-item'])
   console.log(str)
 }
 openLinkedin(){
