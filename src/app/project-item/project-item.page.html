@@ -1,4 +1,37 @@
-
+<app-nav>
+</app-nav>
 <ion-content>
+    <br>
 
+
+    <div class="container">
+        <h3 class="h3Text">{{projectObject.name}}</h3>
+        <br>
+        <h4 class="h3Text"> {{projectObject.type}}</h4>
+        <p class="h3Text">
+            <br>
+            <a href="/portfolio">Portfolio</a> > <a href={{hrefvar}}>{{projectObject.name}}</a>
+        </p>
+        <div class="row">
+
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                <div class = "box">
+                <br>
+                <h4 class="h3Text" style="padding-left: 2%;">Project Brief</h4>
+                <p style="padding-left: 2%;">{{projectObject.des}}</p>
+
+                <h4 class="h3Text" style="padding-left: 2%;">Technologies Used</h4>
+                <p [innerHTML] = "projectObject.technologiesUsed" style="padding-left: 2%;"></p>
+            </div>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <ion-card>
+                    dfklhsd
+                    </ion-card>
+                    <ion-card>
+                        dfklhsd
+                        </ion-card>
+            </div>
+        </div>
+    </div>
 </ion-content>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
+import { ProjectsService } from '../projects.service'
 
 @Component({
   selector: 'app-tab2',
@@ -8,10 +9,12 @@ import { Router } from '@angular/router';
 })
 export class Tab2Page {
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private projectsService: ProjectsService) {}
 projectItem(str){
-  this.router.navigate(['/portfolio/project-item'+ '/' + str])
-  console.log(str)
+  let navigationExtras: NavigationExtras = { state: { str: str } };
+  this.router.navigate(['/portfolio/project-item', str], navigationExtras);
+  localStorage.setItem("id",str);
+
 }
 openLinkedin(){
   window.open("https://www.linkedin.com/in/nicholas-soh-6b55ab171/")
