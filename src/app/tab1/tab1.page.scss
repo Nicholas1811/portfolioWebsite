@@ -4,7 +4,7 @@
     margin: auto;
 }
 ion-icon {
-    font-size: 250%; 
+    font-size: 200%; 
 }
 .center{
     margin: auto;
@@ -12,9 +12,44 @@ ion-icon {
 img{
     border-radius: 50%;
 }
-.button{
-    background-color: #121212;
+
+ion-content{
+    --background: #121212;
 }
+
 *{
     font-family: Helvetica;
+    color: beige;
+}
+.linkedinLogo{
+    margin: auto;
+}
+
+#page-container {
+    position: relative;
+    min-height: 15vh;
+  }
+  
+  #footer {
+    position: absolute;
+    bottom: 0;
+    height: 2.5rem;           /* Footer height */
+  }
+  .myLabels{
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 15px;
+    margin: auto;
+}
+h5{
+    font-family: Helvetica;
+    font-weight: bold;
+    margin: auto;
+}
+h6{
+    font-weight: bold;
+    font-style: italic;
+}
+ion-tab-bar{
+    --border : none;
 }

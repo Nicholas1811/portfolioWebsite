@@ -4,13 +4,60 @@ text-align: center;
 p{
 text-align: center;
 }
-img{
-    height: 100%;
-    width: 100%;
-}
 title{
-font-size: 15px;
+align-items: center;
 }
 ion-card{
     box-shadow: 2px 2px 2px 2px #8a795d;
+}
+
+.ionImg{
+    height: 70%;
+    width: 40%;
+    margin: auto;
+}
+ion-icon {
+    font-size: 200%; 
+}
+.center{
+    margin: auto;
+}
+
+ion-content{
+    --background: #121212;
+}
+
+*{
+    font-family: Helvetica;
+    color: beige;
+}
+.linkedinLogo{
+    margin: auto;
+}
+
+#page-container {
+    position: relative;
+    min-height: 15vh;
+  }
+  
+  #footer {
+    position: absolute;
+    bottom: 0;
+    height: 2.5rem;            /* Footer height */
+  }
+  .myLabels{
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 15px;
+    margin: auto;
+}
+h5{
+    font-family: Helvetica;
+    font-weight: bold;
+}
+ion-card-title{
+    align-self: center;
+}
+ion-card{
+    --background: #202020;
 }

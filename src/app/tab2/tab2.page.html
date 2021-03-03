@@ -6,42 +6,108 @@
   </ion-toolbar>
 </ion-header> -->
 
-<ion-content [fullscreen]="true">
-<br><br>
-<h3>Portfolio</h3>
-<p>These are some of the works I have done previously.</p>
-<div class = "container">
-<div class = "row">
-<div class = "col-xs-4 col-md-4">
-  <ion-card (click) = "projectItem()">
-  <img src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC">
-  <p class = "title"><b>TP Open House 2021</b></p>
-  </ion-card>
-  </div>  
-  <div class = "col-xs-4 col-md-4">
-    <ion-card>
-      <img src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC">
-    <p class = "title"><b>TradeX</b></p>
-    </ion-card>
-    </div> 
-    <div class = "col-xs-4 col-md-4">
-      <ion-card>
-        <img src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC">
-        <p class = "title" ><b>ieatifindimake</b></p>
-      </ion-card>
-      </div> 
-      <div class = "col-xs-4 col-md-4">
-        <ion-card>
-          <img src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC">
-          <p class = "title"><b>KReviews</b></p>
+<ion-content>
+  <br>
+  <h3>Portfolio</h3>
+  <p>These are some of the works I have done previously.</p>
+
+  <div class="container">
+    <h4><b>Mobile Applications</b></h4>
+    <br>
+    <div class="row">
+
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <ion-card (click)="projectItem('Open House')">
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/portfolio-73db1.appspot.com/o/port1.png?alt=media&token=84c9c0fa-fb2f-4d5c-b96c-7a5c608534df">
+            <ion-card-header>
+            <ion-card-title class="title"><b>TP Open House 2021</b></ion-card-title>
+            </ion-card-header>
+          <ion-card-content>
+            In this project, I was a Front End Developer, where I was involved in bugtesting and developing of
+            functions.
+          </ion-card-content>
         </ion-card>
-        </div> 
-        <div class = "col-xs-4 col-md-4">
-          <ion-card>
-            <img src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC">
-            <p class = "title"><b>EZBEATS</b></p>
-          </ion-card>
-          </div> 
-</div>  
-</div>
+      </div>
+
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <ion-card (click)="projectItem('ieatifindimake')">
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/portfolio-73db1.appspot.com/o/port2.png?alt=media&token=958313db-8e2b-4a8c-8b73-73279d6e3fac">
+            <ion-card-header>
+            <ion-card-title class="title"><b>ieatifindimake</b></ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              In this project, I made a recipe review mobile application with Ionic framework, which allows users to view and create reviews on recipes.
+            </ion-card-content>
+        </ion-card>
+      </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <ion-card (click)="projectItem('EZBEATS')">
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/portfolio-73db1.appspot.com/o/port3.png?alt=media&token=14a7937a-cab4-4b55-9551-d15461f1e36b">
+            <ion-card-header>
+            <ion-card-title class="title"><b>EZBEATS</b></ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              In this project, I did a music player application with Android Studio. It allows users to search and play music, amongst other functions.
+            </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <h4><b>Web Applications</b></h4>
+    <div class="row">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <ion-card (click)="projectItem('TradeX')">
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/portfolio-73db1.appspot.com/o/obkd.png?alt=media&token=0c8ce181-2804-47ad-971c-10f62bda8faf" style="width: 200%;">
+            <ion-card-header>
+            <ion-card-title class="title"><b>TradeX</b></ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              In this project, I did the portion of US Equities, where I made API Calls to get real time prices and allow users to purchase equities.
+            </ion-card-content>
+        </ion-card>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <ion-card (click)="projectItem('KReviews')">
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/portfolio-73db1.appspot.com/o/Untitled.png?alt=media&token=6c7fe3ea-f6f9-42bc-b364-83436b326492" style="width: 200%;">
+            <ion-card-header>
+            <ion-card-title class="title"><b>KReviews</b></ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              In this project, I have created a restaurant review website. It has Google Maps API and user session functionalities integrated into it.
+            </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+  </div>
+  <div id="page-container">
+    <ion-footer id="footer">
+      <ion-toolbar>
+        <ion-list style="text-align:center">
+          <br>
+          <ion-button (click)="openLinkedin()" fill="clear">
+            <ion-icon name="logo-linkedin" class="linkedinLogo" style="color : #0e76a8"></ion-icon>
+          </ion-button>
+          <ion-button (click)="openIg()" fill="clear">
+            <ion-icon name="logo-instagram" class="linkedinLogo" style="color: #E1306C"></ion-icon>
+          </ion-button>
+          <ion-button (click)="openFb()" fill="clear">
+            <ion-icon name="logo-facebook" class="linkedinLogo" style="color: #3b5998"></ion-icon>
+          </ion-button>
+          <ion-button (click)="openTwitter()" fill="clear">
+            <ion-icon name="logo-twitter" class="linkedinLogo" style="color: #00acee"></ion-icon>
+          </ion-button>
+          <br><br>
+          <h5>©2021 Nicholas Soh</h5>
+        </ion-list>
+
+      </ion-toolbar>
+    </ion-footer>
+  </div>
 </ion-content>

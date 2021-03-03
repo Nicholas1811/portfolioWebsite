@@ -1,8 +1,20 @@
 .myLabels{
     font-family: Helvetica;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 14px;
 }
 *{
     font-family: Helvetica;
+}
+ion-tab-button{
+    --background: #202020;
+    width: 50%;
+    margin: auto;
+}
+ion-tab-bar{
+    --background: #202020;
+    height: 10%;
+}
+.img1{
+    height: 50%;
 }

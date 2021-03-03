@@ -1,33 +1,54 @@
+
 <ion-content>
-  <br><br>
+  <br>
   <div class = "container">
+    
         <div class = "row">
-          <div class ="col-md-6 col-xs-2">
+          <div class ="col-xs-6 col-sm-6 col-md-6 col-lg-6">
           <img src = "https://media-exp1.licdn.com/dms/image/C5603AQEGMUeOp6d-xA/profile-displayphoto-shrink_400_400/0/1609160828062?e=1620259200&v=beta&t=xbqrn0HwVCdQBPRbFDTzebbiPw6lqdus8ZNbVzmLl-k">
             </div>
 
-          <div class = "col-md-6 col-xs-2">
-            <h2>I AM NICHOLAS SOH</h2>
+          <div class = "col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <h1><b>NICHOLAS SOH</b></h1>
+            <h6> Aspiring application developer.</h6>
+            <br>
             <P>Hey there!</P>
             <p>I am currently a Second-Year Student in Temasek Polytechnic pursuing the course of Financial Business Informatics.
               During my course of studies, I have take up various modules which allowed me to gain a wealth of experience in developing
-              applications.
+              applications. Some languages that I have once interacted with include, Java, Javascript and Flask.
             </p>
-            <p>I aspire to be in the technology industry where I can develop applications and contribute to an organization. With that, do feel free to browse around my portfolio!</p>
-            <h4>
-              Find me on:
-              <br>
-              <ion-button (click) = "openLinkedin()" class = "button">
-              <ion-icon name = "logo-linkedin" class = "linkedinLogo"></ion-icon>
-              </ion-button>
-              <ion-button (click) = "openIg()" class = "button">
-              <ion-icon name = "logo-instagram" class = "linkedinLogo"></ion-icon>
-              </ion-button>
-              <ion-button (click) = "openFb()" class = "button">
-              <ion-icon name = "logo-facebook" class = "linkedinLogo"></ion-icon>
-              </ion-button>
-            </h4>
+            <p>I aspire to be in the technology industry where I can develop applications and contribute to an organization. I am always intriguied with applications filled with innovation. </p>
+              <p>With that, do feel free to browse around my portfolio!</p>
           </div>
         </div>
   </div>
+
+  <div id = "page-container">
+    <ion-footer id = "footer">
+      <ion-toolbar>
+        <ion-list style = "text-align:center">
+          <br>
+        <ion-button (click) = "openLinkedin()" fill = "clear">
+          <ion-icon name = "logo-linkedin" class = "linkedinLogo" style = "color : #0e76a8"></ion-icon>
+          </ion-button>
+          <ion-button (click) = "openIg()" fill = "clear">
+          <ion-icon name = "logo-instagram" class = "linkedinLogo" style="color: #E1306C"></ion-icon>
+          </ion-button>
+          <ion-button (click) = "openFb()" fill = "clear">
+          <ion-icon name = "logo-facebook" class = "linkedinLogo" style="color: #3b5998"></ion-icon>
+          </ion-button>
+          <ion-button (click) = "openTwitter()" fill = "clear">
+            <ion-icon name = "logo-twitter" class = "linkedinLogo" style="color: #00acee"></ion-icon>
+            </ion-button>
+            <br><br>
+            <h5>©2021 Nicholas Soh</h5>
+          </ion-list>
+          
+      </ion-toolbar>
+    </ion-footer>
+  </div>
+
+
+
 </ion-content>
+

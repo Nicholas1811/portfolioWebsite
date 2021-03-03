@@ -9,7 +9,20 @@ import { Router } from '@angular/router';
 export class Tab2Page {
 
   constructor(private router: Router) {}
-projectItem(){
-  this.router.navigate(['/tabs/project-item'])
+projectItem(str){
+  this.router.navigate(['/tabs/Portfolio/project-item'])
+  console.log(str)
+}
+openLinkedin(){
+  window.open("https://www.linkedin.com/in/nicholas-soh-6b55ab171/")
+}
+openIg(){
+  window.open("https://www.instagram.com/niicc.cc")
+}
+openFb(){
+  window.open("https://www.facebook.com/nicsohdelin/")
+}
+openTwitter(){
+  window.open("https://twitter.com/niicc_cc")
 }
 }
