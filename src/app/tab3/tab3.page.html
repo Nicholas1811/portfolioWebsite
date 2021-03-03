@@ -2,63 +2,58 @@
 </app-nav>
 
 <ion-content>
-  <br>
   <div class="container">
     <br>
-
+    <h3 style="text-align: center;">About Me</h3>
+    <br>
     <div class="row">
-      <div class="col-xs-4 col-sm-4 col-sm-4 col-lg-4">
-        <br><br><br>
-        <ion-icon name="logo-linkedin" style="color : #202020"></ion-icon>
-        <ion-label>
-          https://www.linkedin.com/in/nicholas-soh-6b55ab171/
-        </ion-label>
-        <br><br>
-        <ion-icon name="logo-facebook" style="color : #202020"></ion-icon>
-        <ion-label>
-          https://www.facebook.com/nicsohdelin/
-        </ion-label>
-        <br><br>
-        <ion-icon name="logo-twitter" style="color : #202020"></ion-icon>
-        <ion-label>
-          https://twitter.com/niicc_cc
-        </ion-label>
-        <br><br>
-        <ion-icon name="logo-instagram" style="color : #202020"></ion-icon>
-        <ion-label>
-          https://www.instagram.com/niicc.cc
-        </ion-label>
+      <div class="col-xs-6 col-sm-6 col-sm-6 col-lg-6">
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/portfolio-73db1.appspot.com/o/myself1.jpg?alt=media&token=1937783f-a10e-45ff-849b-48058a1ce4c2">
       </div>
+      <div class="col-xs-6 col-sm-6 col-sm-6 col-lg-6">
+        <p>I am currently a Second-Year Student in Temasek Polytechnic pursuing the course of Financial Business Informatics.
+          During my course of studies, I have take up various modules which allowed me to gain a wealth of experience in developing
+          applications. Some languages that I have once interacted with include, Java, Javascript and Flask.
+        </p>
+        <p>I aspire to be in the technology industry where I can develop applications and contribute to an organization. I am always intriguied with applications filled with innovation. </p>      
+      <h5><b>You can contact me via: </b></h5>
+      <ion-item lines = "none" style="color: #0072c6; font-weight: bold;" (click) = "openEmail()">Email</ion-item>
 
-      <div class="col-xs-8 col-sm-8 col-sm-8 col-lg-8">
-        <h3 style="text-align: center; font-family: Helvetica; font-weight: bold;">Contact Me.</h3>
-        <p style="text-align: center;  font-family: Helvetica;">You can key in your email and your content here. I'll be
-          glad to answer your
-          questions!</p>
-        <ion-grid>
-          <ion-row>
-            <ion-col>
-              <ion-input placeholder="Name">
-              </ion-input>
-            </ion-col>
-            <ion-col>
-              <ion-input placeholder="Email address">
-              </ion-input>
-            </ion-col>
-          </ion-row>
-          <br>
-          <ion-row>
-            <ion-textarea placeholder="Message" style="background: beige; border-radius: 10px;" rows = 5>
-            </ion-textarea>
-            </ion-row>
-        </ion-grid>
-        <br>
+      <ion-item lines = "none" style="color:#0e76a8; font-weight: bold;" (click) = "openLinkedin()">Linkedin</ion-item>
+   
+      <ion-item lines = "none" style="color: #E1306C; font-weight: bold;" (click) = "openInstagram()">Instagram</ion-item>
+ 
+      <ion-item lines = "none" style="color: #3b5998; font-weight: bold;" (click) = "openFacebook()">Facebook</ion-item>
 
-        <ion-button>
-          Send Message
-        </ion-button>
+      <ion-item lines = "none" style="color:#00acee; font-weight: bold;" (click) = "openTwitter()">Twitter</ion-item>
       </div>
-
     </div>
+  </div>
+
+
+  <div id="page-container">
+    <ion-footer id="footer">
+      <ion-toolbar>
+        <ion-list style="text-align:center">
+          <br>
+          <ion-button (click)="openLinkedin()" fill="clear">
+            <ion-icon name="logo-linkedin" class="linkedinLogo" style="color : #0e76a8"></ion-icon>
+          </ion-button>
+          <ion-button (click)="openInstagram()" fill="clear">
+            <ion-icon name="logo-instagram" class="linkedinLogo" style="color: #E1306C"></ion-icon>
+          </ion-button>
+          <ion-button (click)="openFacebook()" fill="clear">
+            <ion-icon name="logo-facebook" class="linkedinLogo" style="color: #3b5998"></ion-icon>
+          </ion-button>
+          <ion-button (click)="openTwitter()" fill="clear">
+            <ion-icon name="logo-twitter" class="linkedinLogo" style="color: #00acee"></ion-icon>
+          </ion-button>
+          <br><br>
+          <h5>©2021 Nicholas Soh</h5>
+        </ion-list>
+
+      </ion-toolbar>
+    </ion-footer>
   </div>
 </ion-content>

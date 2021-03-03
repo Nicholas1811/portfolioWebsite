@@ -11,10 +11,36 @@ ion-fab-button{
 }
 
 ion-icon{
-    background-color: beige;
-    font-size: 20px;
+    background-color: #202020;
+    font-size: 200%;
 }
 ion-textarea{
     --placeholder-color: gray;
     --color: #202020;
 }
+img{
+    border-radius: 50%;
+}
+ion-button{
+    --background: #202020;
+}
+
+
+#page-container {
+    position: relative;
+    min-height: 15vh;
+  }
+  
+  #footer {
+    position: absolute;
+    bottom: 0;
+    height: 2.5rem;           /* Footer height */
+  }
+
+  ion-item{
+      --background: #121212;
+  }
+  ion-item:hover{
+    --background: beige;
+    margin: 10px 10px 10px 10px
+  }

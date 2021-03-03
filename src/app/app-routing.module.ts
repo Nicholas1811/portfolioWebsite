@@ -15,7 +15,7 @@ const routes: Routes = [
     loadChildren: () => import('./tab3/tab3.module').then(m => m.Tab3PageModule)
   },
   {
-    path: 'project-item',
+    path: 'portfolio/project-item/:name',
     loadChildren: () => import('./project-item/project-item.module').then( m => m.ProjectItemPageModule)
   }
 ];

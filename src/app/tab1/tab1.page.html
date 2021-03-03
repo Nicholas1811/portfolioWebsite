@@ -1,55 +1,60 @@
 <app-nav>
-  </app-nav>
+</app-nav>
 <ion-content>
   <br>
-  <div class = "container">
-    
-        <div class = "row">
-          <div class ="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-          <img src = "https://media-exp1.licdn.com/dms/image/C5603AQEGMUeOp6d-xA/profile-displayphoto-shrink_400_400/0/1609160828062?e=1620259200&v=beta&t=xbqrn0HwVCdQBPRbFDTzebbiPw6lqdus8ZNbVzmLl-k">
-            </div>
+  <div class="container">
 
-          <div class = "col-xs-6 col-sm-6 col-md-6 col-lg-6">
-            <h1><b>NICHOLAS SOH</b></h1>
-            <h6> Aspiring application developer.</h6>
-            <br>
-            <P>Hey there!</P>
-            <p>I am currently a Second-Year Student in Temasek Polytechnic pursuing the course of Financial Business Informatics.
-              During my course of studies, I have take up various modules which allowed me to gain a wealth of experience in developing
-              applications. Some languages that I have once interacted with include, Java, Javascript and Flask.
-            </p>
-            <p>I aspire to be in the technology industry where I can develop applications and contribute to an organization. I am always intriguied with applications filled with innovation. </p>
-              <p>With that, do feel free to browse around my portfolio!</p>
-          </div>
-        </div>
+    <div class="row">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <img
+          src="https://media-exp1.licdn.com/dms/image/C5603AQEGMUeOp6d-xA/profile-displayphoto-shrink_400_400/0/1609160828062?e=1620259200&v=beta&t=xbqrn0HwVCdQBPRbFDTzebbiPw6lqdus8ZNbVzmLl-k">
+      </div>
+
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <h1><b>NICHOLAS SOH</b></h1>
+        <h6> Aspiring application developer.</h6>
+        <br>
+        <P>Hey there!</P>
+        <p>I see that you have entered into my e-portfolio. I thank you for coming into here. In this website, you can
+          expect to see projects that I have done during the time in my studies.
+        </p>
+        <p>I am not only seeking to get a job in an organization but instead, bring change to it. I would like to bring
+          my experience into the table and solve
+          real world business problems. In addition, I believe that with my strong communication skills in this
+          fast-paced society, I can introduce fresh ideas.</p>
+        <p>With that, do feel free to browse around my portfolio!</p>
+      </div>
+    </div>
   </div>
 
-  <div id = "page-container">
-    <ion-footer id = "footer">
+  <div id="page-container">
+    <ion-footer id="footer">
       <ion-toolbar>
-        <ion-list style = "text-align:center">
-          <br>
-        <ion-button (click) = "openLinkedin()" fill = "clear">
-          <ion-icon name = "logo-linkedin" class = "linkedinLogo" style = "color : #0e76a8"></ion-icon>
-          </ion-button>
-          <ion-button (click) = "openIg()" fill = "clear">
-          <ion-icon name = "logo-instagram" class = "linkedinLogo" style="color: #E1306C"></ion-icon>
-          </ion-button>
-          <ion-button (click) = "openFb()" fill = "clear">
-          <ion-icon name = "logo-facebook" class = "linkedinLogo" style="color: #3b5998"></ion-icon>
-          </ion-button>
-          <ion-button (click) = "openTwitter()" fill = "clear">
-            <ion-icon name = "logo-twitter" class = "linkedinLogo" style="color: #00acee"></ion-icon>
-            </ion-button>
-            <br><br>
-            <h5>©2021 Nicholas Soh</h5>
-          </ion-list>
-          
+        <ion-item>
+          <div class = "container">
+              <br>
+              <ion-button (click)="openLinkedin()" fill="clear">
+                <ion-icon name="logo-linkedin" class="linkedinLogo" style="color : #0e76a8"></ion-icon>
+              </ion-button>
+              <ion-button (click)="openIg()" fill="clear">
+                <ion-icon name="logo-instagram" class="linkedinLogo" style="color: #E1306C"></ion-icon>
+              </ion-button>
+
+              <ion-button (click)="openFb()" fill="clear">
+                <ion-icon name="logo-facebook" class="linkedinLogo" style="color: #3b5998"></ion-icon>
+              </ion-button>
+    
+              <ion-button (click)="openTwitter()" fill="clear">
+                <ion-icon name="logo-twitter" class="linkedinLogo" style="color: #00acee"></ion-icon>
+              </ion-button>
+              <br>
+            <br>
+          </div>
+          <h5>©2021 Nicholas Soh</h5>
+        </ion-item>
       </ion-toolbar>
     </ion-footer>
   </div>
 
 
-
 </ion-content>
-
