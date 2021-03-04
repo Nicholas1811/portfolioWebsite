@@ -6,3 +6,30 @@
     border-radius: 20px;
     box-shadow: 5px 5px 5px 5px grey;
 }
+ion-content{
+    --background: #121212;
+}
+img{
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+}
+ion-segment-button{
+    --background: #121212;
+}
+#page-container {
+    position: relative;
+    min-height: 15vh;
+  }
+  
+  #footer {
+    position: absolute;
+    bottom: 0;
+    height: 2.5rem;            /* Footer height */
+  }
+  ion-button{
+      text-transform: none;
+  }
+  .title{
+      font-family: Helvetica;
+  }

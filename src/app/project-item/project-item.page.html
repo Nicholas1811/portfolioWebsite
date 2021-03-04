@@ -2,36 +2,101 @@
 </app-nav>
 <ion-content>
     <br>
-
-
     <div class="container">
         <h3 class="h3Text">{{projectObject.name}}</h3>
         <br>
         <h4 class="h3Text"> {{projectObject.type}}</h4>
-        <p class="h3Text">
+        <h5 class="h3Text">
             <br>
             <a href="/portfolio">Portfolio</a> > <a href={{hrefvar}}>{{projectObject.name}}</a>
-        </p>
-        <div class="row">
+        </h5>
 
-            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-                <div class = "box">
-                <br>
-                <h4 class="h3Text" style="padding-left: 2%;">Project Brief</h4>
-                <p style="padding-left: 2%;">{{projectObject.des}}</p>
+        <ion-segment value="brief" color="tertiary" scrollable="true" mode="ios" [(ngModel)]="segmentModel"
+            (ionChange)="segmentChanged($event)">
+            <ion-segment-button value="brief">
+                <ion-label style="font-family: Helvetica; font-weight: bold;">Project Information</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="image">
+                <ion-label style="font-family: Helvetica; font-weight: bold;">Project Images</ion-label>
+            </ion-segment-button>
+        </ion-segment>
 
-                <h4 class="h3Text" style="padding-left: 2%;">Technologies Used</h4>
-                <p [innerHTML] = "projectObject.technologiesUsed" style="padding-left: 2%;"></p>
+        <br>
+        <div *ngIf="segmentModel === 'brief'">
+            <div class="row">
+
+                <div class="col-xs col-sm col-md col-lg">
+                    <div class="box">
+                        <br>
+                        <h4 class="h3Text" style="padding-left: 2%; padding-right: 2%;">Project Brief</h4>
+                        <p style="padding-left: 2%;">{{projectObject.des}}</p>
+
+                        <h4 class="h3Text" style="padding-left: 2%;">Technologies Used</h4>
+                        <p [innerHTML]="projectObject.technologiesUsed" style="padding-left: 2%;"></p>
+
+                        <h4 class="h3Text" style="padding-left: 2%;">Achieved Grade</h4>
+                        <p style="padding-left: 2%;"> {{projectObject.achievedGrade}}</p>
+                        <br>
+                    </div>
+                    <br>
+                </div>
             </div>
+            <br>
+            <div class="row">
+                <h4 class="h3Text" style="padding-left: 2%; padding-right: 2%;">You may also be interested in</h4>
             </div>
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                <ion-card>
-                    dfklhsd
-                    </ion-card>
+            <div class="row">
+                <div class="col-xs col-sm col-md col-lg" *ngFor="let projects of projectArray">
                     <ion-card>
-                        dfklhsd
-                        </ion-card>
+                        <ion-card-header>
+                            <ion-card-title class="title"><b>{{projects.name}}</b></ion-card-title>
+                        </ion-card-header>
+                        <ion-card-content>
+                            <ion-button expand="full" (click)="openNew(projects.id)" style="--background: #121212;">
+                                View Project
+                            </ion-button>
+                        </ion-card-content>
+                    </ion-card>
+                </div>
             </div>
         </div>
+
+        <br>
+        <div row *ngIf="segmentModel === 'image'">
+            <div class="col">
+                <h4 class="h3Text" style="padding-left: 2%;">Images of Project</h4>
+                <h5 class="h3Text" style="padding-left: 2%;">These are some images of the application.</h5>
+                <br>
+                <ion-slides [options]="slideOptsOne">
+                    <ion-slide *ngFor="let image of projectObject.image">
+                        <img src={{image}}>
+                    </ion-slide>
+                </ion-slides>
+            </div>
+        </div>
+    </div>
+    <div id="page-container">
+        <ion-footer id="footer">
+            <ion-toolbar>
+                <ion-list style="text-align:center">
+                    <br>
+                    <ion-button (click)="openLinkedin()" fill="clear">
+                        <ion-icon name="logo-linkedin" class="linkedinLogo" style="color : #0e76a8"></ion-icon>
+                    </ion-button>
+                    <ion-button (click)="openIg()" fill="clear">
+                        <ion-icon name="logo-instagram" class="linkedinLogo" style="color: #E1306C"></ion-icon>
+                    </ion-button>
+                    <ion-button (click)="openFb()" fill="clear">
+                        <ion-icon name="logo-facebook" class="linkedinLogo" style="color: #3b5998"></ion-icon>
+                    </ion-button>
+                    <ion-button (click)="openTwitter()" fill="clear">
+                        <ion-icon name="logo-twitter" class="linkedinLogo" style="color: #00acee"></ion-icon>
+                    </ion-button>
+                    <br><br>
+                    <h5>©2021 Nicholas Soh</h5>
+                </ion-list>
+
+            </ion-toolbar>
+        </ion-footer>
     </div>
 </ion-content>
