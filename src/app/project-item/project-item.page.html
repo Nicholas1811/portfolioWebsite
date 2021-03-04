@@ -8,7 +8,7 @@
         <h4 class="h3Text"> {{projectObject.type}}</h4>
         <h5 class="h3Text">
             <br>
-            <a href="/portfolio">Portfolio</a> > <a href={{hrefvar}}>{{projectObject.name}}</a>
+            <a href="/portfolio" style="color: white;">Portfolio</a> > <a href={{hrefvar}} style="color: grey;"><b>{{projectObject.name}}</b></a>
         </h5>
 
         <ion-segment value="brief" color="tertiary" scrollable="true" mode="ios" [(ngModel)]="segmentModel"
@@ -67,9 +67,11 @@
                 <h4 class="h3Text" style="padding-left: 2%;">Images of Project</h4>
                 <h5 class="h3Text" style="padding-left: 2%;">These are some images of the application.</h5>
                 <br>
-                <ion-slides [options]="slideOptsOne">
+                <ion-slides [options]="slideOptsOne" pager style="background-color: #202020; border-radius: 20px;">
                     <ion-slide *ngFor="let image of projectObject.image">
-                        <img src={{image}}>
+                        <div class = "container">
+                        <img src={{image}} style="padding-top: 10px; padding-bottom: 10px;">
+                        </div>
                     </ion-slide>
                 </ion-slides>
             </div>
@@ -77,26 +79,51 @@
     </div>
     <div id="page-container">
         <ion-footer id="footer">
-            <ion-toolbar>
-                <ion-list style="text-align:center">
-                    <br>
-                    <ion-button (click)="openLinkedin()" fill="clear">
-                        <ion-icon name="logo-linkedin" class="linkedinLogo" style="color : #0e76a8"></ion-icon>
-                    </ion-button>
-                    <ion-button (click)="openIg()" fill="clear">
-                        <ion-icon name="logo-instagram" class="linkedinLogo" style="color: #E1306C"></ion-icon>
-                    </ion-button>
-                    <ion-button (click)="openFb()" fill="clear">
-                        <ion-icon name="logo-facebook" class="linkedinLogo" style="color: #3b5998"></ion-icon>
-                    </ion-button>
-                    <ion-button (click)="openTwitter()" fill="clear">
-                        <ion-icon name="logo-twitter" class="linkedinLogo" style="color: #00acee"></ion-icon>
-                    </ion-button>
-                    <br><br>
-                    <h5>©2021 Nicholas Soh</h5>
-                </ion-list>
-
-            </ion-toolbar>
+          <ion-toolbar style = "--background: #121212;">
+            <div class = "container" style="background-color: #121212;">
+            <div class = "row">
+            <div class = "col" style="text-align:center">
+              <h4>Technical Skills</h4>
+                Web Development
+                <br><br>
+                Mobile Application Development
+                <br><br>
+                Version Control
+              </div>  
+              <div class = "col" style="text-align:center">
+                NICHOLAS SOH
+              </div>  
+              <div class = "col" style="text-align:center">
+                <h4>Soft Skills</h4>
+                Teamwork
+                <br><br>
+                Communication
+                <br><br>
+                Critical-Thinking
+              </div>  
+            </div>  
+            </div>
+          </ion-toolbar>
+          <ion-toolbar style="color: #121212;">
+            <ion-list style="text-align:center; background-color: #121212;">
+              <br>
+              <ion-button (click)="openLinkedin()" fill="clear">
+                <ion-icon name="logo-linkedin" class="linkedinLogo" style="color : #0e76a8"></ion-icon>
+              </ion-button>
+              <ion-button (click)="openIg()" fill="clear">
+                <ion-icon name="logo-instagram" class="linkedinLogo" style="color: #E1306C"></ion-icon>
+              </ion-button>
+              <ion-button (click)="openFb()" fill="clear">
+                <ion-icon name="logo-facebook" class="linkedinLogo" style="color: #3b5998"></ion-icon>
+              </ion-button>
+              <ion-button (click)="openTwitter()" fill="clear">
+                <ion-icon name="logo-twitter" class="linkedinLogo" style="color: #00acee"></ion-icon>
+              </ion-button>
+              <br><br>
+              <h5 style="color: white;">©2021 Nicholas Soh</h5>
+            </ion-list>
+      
+          </ion-toolbar>
         </ion-footer>
-    </div>
+      </div>
 </ion-content>
