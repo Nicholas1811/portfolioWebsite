@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';
-import { IonSlides } from '@ionic/angular';
-import { ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-project-item',
@@ -10,7 +8,6 @@ import { ViewChild } from '@angular/core';
 })
 
 export class ProjectItemPage implements OnInit {
-  @ViewChild('slides') slider: IonSlides;
   projectArray;
   projectObject;
   hrefvar;
@@ -22,7 +19,6 @@ export class ProjectItemPage implements OnInit {
     autoplay: true,
     allowTouchMove: false,
     speed: 500,
-    loop: true
   };
   data;
   slides;
@@ -33,7 +29,7 @@ export class ProjectItemPage implements OnInit {
       if (params && params.special) {
         this.data = JSON.parse(params.special);
         console.log(this.data)
-        this.hrefvar = "/portfolio/project-item/" + this.data;
+        this.hrefvar = "javascript:window.location.reload(true)"
         this.projectArray = [
           {
             id: "OpenHouse",
@@ -109,17 +105,7 @@ export class ProjectItemPage implements OnInit {
   }
   id: any;
   ngOnInit() { }
-  ionViewWillEnter() {
-    this.slides.startAutoplay();
-  }
 
-  ionViewDidEnter() {
-    this.slides.startAutoplay();
-  }
-
-  ionViewWillLeave() {
-    this.slides.stopAutoplay()
-  }
   segmentChanged(event) {
     console.log(event);
   }
@@ -139,6 +125,8 @@ export class ProjectItemPage implements OnInit {
   openTwitter() {
     window.open("https://twitter.com/niicc_cc")
   }
-
-
+  openThis(str){
+    let navigationExtras: NavigationExtras = { queryParams: { special: JSON.stringify(str) } };
+  this.router.navigate(['/portfolio/project-item', str], navigationExtras);
+  }
 }

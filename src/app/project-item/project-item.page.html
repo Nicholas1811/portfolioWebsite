@@ -8,7 +8,7 @@
         <h4 class="h3Text" style="color: white;"> {{projectObject.type}}</h4>
         <h5 class="h3Text" style="color: white;">
             <br>
-            <a href="/portfolio" style="color: lightgray;">Portfolio</a> > <a href={{hrefvar}} style="color: darkgray;"><b>{{projectObject.name}}</b></a>
+            <a href="/portfolio" style="color: lightgray;">Portfolio</a> > <a href = "javascript:void(0)" (click) = "openThis(projectObject.id)" style="color: darkgray;"><b>{{projectObject.name}}</b></a>
         </h5> 
 
         <ion-segment value="brief" color="tertiary" scrollable="true" mode="ios" [(ngModel)]="segmentModel"
@@ -47,7 +47,7 @@
                 <h4 class="h3Text" style="padding-left: 2%; color : white;">Images of Project</h4>
                 <h5 class="h3Text" style="padding-left: 2%; color : white;">These are some images of the application.</h5>
                 <br>
-                <ion-slides [options]="slideOptsOne" style="background-color: #202020; border-radius: 20px;" #slides>
+                <ion-slides [options]="slideOptsOne" style="background-color: #202020; border-radius: 20px;">
                     <ion-slide *ngFor="let image of projectObject.image">
                         <div class = "container">
                         <img src={{image}} style="padding-top: 10px; padding-bottom: 10px;">
