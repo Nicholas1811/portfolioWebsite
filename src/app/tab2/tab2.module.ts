@@ -1,10 +1,11 @@
 import { IonicModule } from '@ionic/angular';
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab2Page } from './tab2.page';
 import { Tab2PageRoutingModule } from './tab2-routing.module';
 import{ ComponentsModule } from '../component.module';
+import{ Component1Module } from '../component1.module';
 
 @NgModule({
   imports: [
@@ -12,7 +13,8 @@ import{ ComponentsModule } from '../component.module';
     CommonModule,
     FormsModule,
     ComponentsModule,
-    Tab2PageRoutingModule
+    Tab2PageRoutingModule,
+    Component1Module
   ],
   declarations: [Tab2Page]
 })

@@ -39,12 +39,6 @@ ion-content{
     position: relative;
     min-height: 15vh;
   }
-  
-  #footer {
-    position: absolute;
-    bottom: 0;
-    height: 2.5rem;            /* Footer height */
-  }
   .myLabels{
     font-family: Helvetica;
     font-weight: bold;
@@ -66,4 +60,7 @@ ion-button{
     text-transform: none;
     font-family: Helvetica;
     font-weight: bold;
+}
+*{
+    color : white;
 }

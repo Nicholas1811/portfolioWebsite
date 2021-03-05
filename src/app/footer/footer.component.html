@@ -1,0 +1,70 @@
+<ion-footer id="footer">
+  <ion-toolbar style="--background: #121212;">
+    <div class="container" style="background-color: #121212;">
+      <div class="row">
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="text-align: center;">
+          <br>
+          <h4><b style="color: white;">Technical Skills</b></h4>
+          <br>
+          <p style="color: white;">
+            Web Development
+            </p>
+          <br>
+          <p style="color: white;">
+          Mobile Application Development
+          </p>
+          <br>
+          <p style="color: white;">
+          Version Control
+          </p>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          <br>
+          <img
+            src="../../assets/iconApp.png"
+            style="max-width: 100%;
+        max-width: 100px;
+        height: auto;" (click)="toRouter()">
+          <br><br>
+          <h5 style="color: white;"> <b>©2021 Nicholas Soh</b></h5>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          <br>
+          <h4><b style="color: white;">Soft Skills</b></h4>
+          <br>
+          <p style="color: white;">
+            Teamwork
+            </p>
+          <br>
+          <p style="color: white;">
+          Communications
+          </p>
+          <br>
+          <p style="color: white;">
+          Critical-Thinking
+          </p>
+        </div>
+      </div>
+    </div>
+  </ion-toolbar>
+  <ion-toolbar style="color: #121212;">
+    <ion-list style="text-align:center; background-color: #121212;">
+      <br>
+      <ion-button (click)="openLinkedin()" fill="clear">
+        <ion-icon name="logo-linkedin" class="linkedinLogo" style="color : #0e76a8"></ion-icon>
+      </ion-button>
+      <ion-button (click)="openIg()" fill="clear">
+        <ion-icon name="logo-instagram" class="linkedinLogo" style="color: #E1306C"></ion-icon>
+      </ion-button>
+      <ion-button (click)="openFb()" fill="clear">
+        <ion-icon name="logo-facebook" class="linkedinLogo" style="color: #3b5998"></ion-icon>
+      </ion-button>
+      <ion-button (click)="openTwitter()" fill="clear">
+        <ion-icon name="logo-twitter" class="linkedinLogo" style="color: #00acee"></ion-icon>
+      </ion-button>
+      <br><br>
+
+    </ion-list>
+
+  </ion-toolbar>
+</ion-footer>

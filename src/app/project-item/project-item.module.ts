@@ -8,6 +8,7 @@ import { ProjectItemPageRoutingModule } from './project-item-routing.module';
 
 import { ProjectItemPage } from './project-item.page';
 import{ ComponentsModule } from '../component.module';
+import{ Component1Module } from '../component1.module';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import{ ComponentsModule } from '../component.module';
     FormsModule,
     IonicModule,
     ComponentsModule,
-    ProjectItemPageRoutingModule
+    ProjectItemPageRoutingModule,
+    Component1Module
   ],
   declarations: [ProjectItemPage]
 })

@@ -17,9 +17,9 @@
             src="https://firebasestorage.googleapis.com/v0/b/portfolio-73db1.appspot.com/o/port1.png?alt=media&token=84c9c0fa-fb2f-4d5c-b96c-7a5c608534df">
             
             <ion-card-header>
-            <ion-card-title class="title"><b>TP Open House 2021</b></ion-card-title>
+            <ion-card-title class="title"><b style="color: white;">TP Open House 2021</b></ion-card-title>
             </ion-card-header>
-          <ion-card-content>
+          <ion-card-content style="color: white;">
             In this project, I was a Front End Developer, where I was involved in bugtesting and developing of
             functions.
             <ion-button expand = "full" (click)="projectItem('OpenHouse')" style="--background: #121212;">
@@ -35,9 +35,9 @@
           <img
             src="https://firebasestorage.googleapis.com/v0/b/portfolio-73db1.appspot.com/o/port2.png?alt=media&token=958313db-8e2b-4a8c-8b73-73279d6e3fac">
             <ion-card-header>
-            <ion-card-title class="title"><b>ieatifindimake</b></ion-card-title>
+            <ion-card-title class="title"><b style="color: white;">ieatifindimake</b></ion-card-title>
             </ion-card-header>
-            <ion-card-content>
+            <ion-card-content style="color: white;">
               In this project, I made a recipe review mobile application with Ionic framework, which allows users to view and create reviews on recipes.
               <ion-button expand = "full" (click)="projectItem('ieatifindimake')" style="--background: #121212;">
                 View Project
@@ -56,9 +56,9 @@
           <img
             src="https://firebasestorage.googleapis.com/v0/b/portfolio-73db1.appspot.com/o/obkd.png?alt=media&token=0c8ce181-2804-47ad-971c-10f62bda8faf" style="width: 200%;">
             <ion-card-header>
-            <ion-card-title class="title"><b>TradeX</b></ion-card-title>
+            <ion-card-title class="title"><b style="color: white;">TradeX</b></ion-card-title>
             </ion-card-header>
-            <ion-card-content>
+            <ion-card-content style="color: white;">
               In this project, I did the portion of US Equities, where I made API Calls to get real time prices and allow users to purchase equities.
               <ion-button expand = "full" (click)="projectItem('TradeX')" style="--background: #121212;">
                 View Project
@@ -71,9 +71,9 @@
           <img
             src="https://firebasestorage.googleapis.com/v0/b/portfolio-73db1.appspot.com/o/Untitled.png?alt=media&token=6c7fe3ea-f6f9-42bc-b364-83436b326492" style="width: 200%;">
             <ion-card-header>
-            <ion-card-title class="title"><b>KReviews</b></ion-card-title>
+            <ion-card-title class="title"><b style="color: white;">KReviews</b></ion-card-title>
             </ion-card-header>
-            <ion-card-content>
+            <ion-card-content style="color: white;">
               In this project, I have created a restaurant review website. It has Google Maps API and user session functionalities integrated into it.
               <ion-button expand = "full" (click)="projectItem('KReviews')" style="--background: #121212;">
                 View Project
@@ -84,55 +84,7 @@
     </div>
   </div>
   <div id="page-container">
-    <ion-footer id="footer">
-      <ion-toolbar style = "--background: #121212;">
-        <div class = "container" style="background-color: #121212;">
-        <div class = "row">
-        <div class = "col" style="text-align: center;">
-          <h4><b>Technical Skills</b></h4>
-            Web Development
-            <br><br>
-            Mobile Application Development
-            <br><br>
-            Version Control
-          </div>  
-          <div class = "col" style="text-align: center;">
-            <h4><b>NICHOLAS SOH</b></h4>
-            <img src = "https://firebasestorage.googleapis.com/v0/b/portfolio-73db1.appspot.com/o/logoWeb.png?alt=media&token=cc752038-94fa-4374-86cd-7d21315044af"  style = "max-width: 100%;
-            max-width: 100px;
-            height: auto;"(click) = "toRouter()">
-          </div>  
-          <div class = "col" style="text-align: center;">
-            <h4><b>Soft Skills</b></h4>
-            Teamwork
-            <br><br>
-            Communication
-            <br><br>
-            Critical-Thinking
-          </div>  
-        </div>  
-        </div>
-      </ion-toolbar>
-      <ion-toolbar style="color: #121212;">
-        <ion-list style="text-align:center; background-color: #121212;">
-          <br>
-          <ion-button (click)="openLinkedin()" fill="clear">
-            <ion-icon name="logo-linkedin" class="linkedinLogo" style="color : #0e76a8"></ion-icon>
-          </ion-button>
-          <ion-button (click)="openIg()" fill="clear">
-            <ion-icon name="logo-instagram" class="linkedinLogo" style="color: #E1306C"></ion-icon>
-          </ion-button>
-          <ion-button (click)="openFb()" fill="clear">
-            <ion-icon name="logo-facebook" class="linkedinLogo" style="color: #3b5998"></ion-icon>
-          </ion-button>
-          <ion-button (click)="openTwitter()" fill="clear">
-            <ion-icon name="logo-twitter" class="linkedinLogo" style="color: #00acee"></ion-icon>
-          </ion-button>
-          <br><br>
-          <h5 style="color: white;">©2021 Nicholas Soh</h5>
-        </ion-list>
-  
-      </ion-toolbar>
-    </ion-footer>
+    <app-footer>
+      </app-footer>
   </div>
 </ion-content>

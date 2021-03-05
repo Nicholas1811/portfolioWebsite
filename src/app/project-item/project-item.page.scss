@@ -11,7 +11,7 @@ ion-content{
 }
 img{
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     height: auto;
 }
 ion-segment-button{
@@ -21,15 +21,14 @@ ion-segment-button{
     position: relative;
     min-height: 15vh;
   }
-  
-  #footer {
-    position: absolute;
-    bottom: 0;
-    height: 2.5rem;            /* Footer height */
-  }
   ion-button{
       text-transform: none;
+      font-family: Helvetica;
+      font-weight: bold;
   }
   .title{
       font-family: Helvetica;
   }
+  *{
+    color : white;
+}
