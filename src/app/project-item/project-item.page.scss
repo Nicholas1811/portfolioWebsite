@@ -6,17 +6,12 @@
     border-radius: 20px;
     box-shadow: 5px 5px 5px 5px grey;
 }
-ion-content{
-    --background: #121212;
-}
 img{
     width: 100%;
     max-width: 600px;
     height: auto;
 }
-ion-segment-button{
-    --background: #121212;
-}
+
 #page-container {
     position: relative;
     min-height: 15vh;
@@ -29,6 +24,12 @@ ion-segment-button{
   .title{
       font-family: Helvetica;
   }
-  *{
-    color : white;
+//   *{
+//     color : white;
+// }
+ion-card{
+    --background: #202020;
+}
+ion-content{
+    --background: #121212;
 }
