@@ -47,7 +47,7 @@
                 <h4 class="h3Text" style="padding-left: 2%; color : white;">Images of Project</h4>
                 <h5 class="h3Text" style="padding-left: 2%; color : white;">These are some images of the application.</h5>
                 <br>
-                <ion-slides [options]="slideOptsOne" style="background-color: #202020; border-radius: 20px;">
+                <ion-slides [options]="slideOptsOne" style="background-color: #202020; border-radius: 20px;" #slides>
                     <ion-slide *ngFor="let image of projectObject.image">
                         <div class = "container">
                         <img src={{image}} style="padding-top: 10px; padding-bottom: 10px;">

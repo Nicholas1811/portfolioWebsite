@@ -11,9 +11,7 @@ export class Tab2Page {
 
   constructor(private router: Router, private projectsService: ProjectsService) {}
 projectItem(str){
-  let navigationExtras: NavigationExtras = { state: { str: str } };
+  let navigationExtras: NavigationExtras = { queryParams: { special: JSON.stringify(str) } };
   this.router.navigate(['/portfolio/project-item', str], navigationExtras);
-  localStorage.setItem("id",str);
-
 }
 }
