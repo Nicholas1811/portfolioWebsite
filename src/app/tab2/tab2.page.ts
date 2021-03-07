@@ -11,7 +11,12 @@ export class Tab2Page {
 
   constructor(private router: Router, private projectsService: ProjectsService) {}
 projectItem(str){
-  let navigationExtras: NavigationExtras = { queryParams: { special: JSON.stringify(str) } };
-  this.router.navigate(['/portfolio/project-item', str], navigationExtras);
+  let navigationExtras: NavigationExtras = { 
+    queryParams: { 
+      special: str
+    } 
+  };
+  console.log(navigationExtras)
+  this.router.navigate(['portfolio/project-item'], navigationExtras);
 }
 }

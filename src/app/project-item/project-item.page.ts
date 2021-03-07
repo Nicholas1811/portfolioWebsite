@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild } from '@angular/core';
 import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';
-
+import { IonContent } from '@ionic/angular';
 @Component({
   selector: 'app-project-item',
   templateUrl: './project-item.page.html',
@@ -8,6 +8,7 @@ import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';
 })
 
 export class ProjectItemPage implements OnInit {
+  @ViewChild(IonContent, { static: false }) content: IonContent;
   projectArray;
   projectObject;
   hrefvar;
@@ -19,6 +20,7 @@ export class ProjectItemPage implements OnInit {
     autoplay: true,
     allowTouchMove: false,
     speed: 500,
+    loop:true
   };
   data;
   slides;
@@ -27,7 +29,7 @@ export class ProjectItemPage implements OnInit {
 
     this.route.queryParams.subscribe(params => {
       if (params && params.special) {
-        this.data = JSON.parse(params.special);
+        this.data = params.special;
         console.log(this.data)
         this.hrefvar = "javascript:window.location.reload(true)"
         this.projectArray = [
@@ -89,15 +91,15 @@ export class ProjectItemPage implements OnInit {
         for (let i = 0; i < this.projectArray.length; i++) {
           if (this.projectArray[i].id == this.data) {
             this.projectObject = this.projectArray[i]
-            break
           }
         }
-        for (let a = 0; a < this.projectArray.length; a++) {
-          if (this.projectArray[a].id == this.data) {
+        for (let a = 0 ; a < this.projectArray.length; a++){
+          if(this.projectArray[a].id == this.data){
             const index = this.projectArray.indexOf(this.projectArray[a]);
             this.projectArray.splice(index, 1)
           }
         }
+
         console.log(this.projectArray)
       }
     });
@@ -110,8 +112,14 @@ export class ProjectItemPage implements OnInit {
     console.log(event);
   }
   openNew(str) {
-    let navigationExtras: NavigationExtras = { queryParams: { special: JSON.stringify(str) } };
-    this.router.navigate(['/portfolio/project-item', str], navigationExtras);
+    let navigationExtras: NavigationExtras = { 
+      queryParams: { 
+        special: str
+      } 
+    };
+    this.router.navigate(['portfolio/project-item'], navigationExtras);
+    this.segmentModel = "brief";
+    this.content.scrollToTop(1500);
   }
   openLinkedin() {
     window.open("https://www.linkedin.com/in/nicholas-soh-6b55ab171/")
@@ -126,7 +134,13 @@ export class ProjectItemPage implements OnInit {
     window.open("https://twitter.com/niicc_cc")
   }
   openThis(str){
-    let navigationExtras: NavigationExtras = { queryParams: { special: JSON.stringify(str) } };
-  this.router.navigate(['/portfolio/project-item', str], navigationExtras);
+    let navigationExtras: NavigationExtras = { 
+      queryParams: { 
+        special: str
+      } 
+    };
+    this.router.navigate(['portfolio/project-item'], navigationExtras);
+
+ 
   }
 }

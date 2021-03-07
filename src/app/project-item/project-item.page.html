@@ -1,6 +1,6 @@
 <app-nav>
 </app-nav>
-<ion-content>
+<ion-content [scrollEvents]="true">
     <br>
     <div class="container">
         <h3 class="h3Text" style="color: white;">{{projectObject.name}}</h3>
@@ -8,7 +8,7 @@
         <h4 class="h3Text" style="color: white;"> {{projectObject.type}}</h4>
         <h5 class="h3Text" style="color: white;">
             <br>
-            <a href="/portfolio" style="color: lightgray;">Portfolio</a> > <a href = "javascript:void(0)" (click) = "openThis(projectObject.id)" style="color: darkgray;"><b>{{projectObject.name}}</b></a>
+            <a href="/portfolio" style="color: lightgray;">Portfolio</a> > <a href = "javascript:void(0)" (click) = "openThis(projectObject.id)" style="color: darkgray; text-decoration: underline;"><b>{{projectObject.name}}</b></a>
         </h5> 
 
         <ion-segment value="brief" color="tertiary" scrollable="true" mode="ios" [(ngModel)]="segmentModel"
@@ -19,43 +19,51 @@
             <ion-segment-button value="image">
                 <ion-label style="font-family: Helvetica; font-weight: bold; color: white">Project Images</ion-label>
             </ion-segment-button>
-        </ion-segment>
+        </ion-segment> 
 
         <br>
-        <div *ngIf="segmentModel === 'brief'">
-            <div class="row">
-
+        <div *ngIf= "segmentModel === 'image'">
+            <div class = "row">
                 <div class="col-xs col-sm col-md col-lg">
-                    <div class="box">
-                        <br>
-                        <h4 class="h3Text" style="padding-left: 2%; padding-right: 2%; color : white; ">Project Brief</h4>
-                        <p style="padding-left: 2%; color : white;">{{projectObject.des}}</p>
+                    <h4 class="h3Text" style="padding-left: 2%; color : white;">Images of Project</h4>
+                    <h5 class="h3Text" style="padding-left: 2%; color : white;">These are some images of the application.</h5>
+                    <br>
+                    <ion-slides [options]="slideOptsOne">
+                        <ion-slide *ngFor="let image of projectObject.image">
+                            <div class = "container">
+                            <img src={{image}} style=" width: 100%;
+                            max-width: 500px;
+                            height: auto; padding-top: 10px; padding-bottom: 10px;" *ngIf = "projectObject.type == 'Mobile Application'">
+                            <img src={{image}} style=" width: 100%;
+                            max-width: 700px;
+                            height: auto; padding-top: 10px; padding-bottom: 10px;"*ngIf = "projectObject.type == 'Web Application'">
+                            </div>
+                        </ion-slide>
+                    </ion-slides>
+                </div>
+            </div>
+            <br>
 
-                        <h4 class="h3Text" style="padding-left: 2%; color : white;">Technologies Used</h4>
-                        <p [innerHTML]="projectObject.technologiesUsed" style="padding-left: 2%; color : white;"></p>
+        </div>
+        <div class="row" *ngIf= "segmentModel === 'brief'">
 
-                        <h4 class="h3Text" style="padding-left: 2%; color : white;">Achieved Grade</h4>
-                        <p style="padding-left: 2%; color : white;"> {{projectObject.achievedGrade}}</p>
-                        <br>
-                    </div>
+            <div class="col-xs col-sm col-md col-lg">
+                <div class="box">
+                    <br>
+                    <h4 class="h3Text" style="padding-left: 2%; padding-right: 2%; color : white; ">Project Brief</h4>
+                    <p style="padding-left: 2%; color : white;">{{projectObject.des}}</p>
+
+                    <h4 class="h3Text" style="padding-left: 2%; color : white;">Technologies Used</h4>
+                    <p [innerHTML]="projectObject.technologiesUsed" style="padding-left: 2%; color : white;"></p>
+
+                    <h4 class="h3Text" style="padding-left: 2%; color : white;">Achieved Grade</h4>
+                    <p style="padding-left: 2%; color : white;"> {{projectObject.achievedGrade}}</p>
+                    <br>
                 </div>
             </div>
         </div>
         <br>
-        <div row *ngIf="segmentModel === 'image'">
-            <div class="col-xs col-sm col-md col-lg">
-                <h4 class="h3Text" style="padding-left: 2%; color : white;">Images of Project</h4>
-                <h5 class="h3Text" style="padding-left: 2%; color : white;">These are some images of the application.</h5>
-                <br>
-                <ion-slides [options]="slideOptsOne" style="background-color: #202020; border-radius: 20px;">
-                    <ion-slide *ngFor="let image of projectObject.image">
-                        <div class = "container">
-                        <img src={{image}} style="padding-top: 10px; padding-bottom: 10px;">
-                        </div>
-                    </ion-slide>
-                </ion-slides>
-            </div>
-        </div>
+
     </div>
     <br><br><br><br>
     <div class = "container">
