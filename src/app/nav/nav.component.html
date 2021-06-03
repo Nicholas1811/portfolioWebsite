@@ -10,14 +10,14 @@
       <ul class="navbar-nav mr-auto">
       </ul>
       <ul class="navbar-nav">
-          <li class="nav-item">
-              <a class="nav-link" href="" style="color: beige; font-family: Helvetica; font-weight: bold;">HOME</a>
+          <li class="nav-item" >
+              <a class="nav-link" href="" [ngStyle]="{'color':currentRoute === '/' ? 'white' : 'lightgrey' }" style=" font-family: Helvetica; font-weight: bold;">HOME</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/portfolio" style="color: beige; font-family: Helvetica; font-weight: bold;">PORTFOLIO</a>
+            <a class="nav-link" href="/portfolio"  [ngStyle]="{'color':currentRoute === '/portfolio' || currentRoute === '/portfolio/project-item?special=OpenHouse' || currentRoute === '/portfolio/project-item?special=ieatifindimake' || currentRoute === '/portfolio/project-item?special=TradeX' || currentRoute === '/portfolio/project-item?special=KReviews' ? 'white' : 'lightgrey' }" style="font-family: Helvetica; font-weight: bold;">PORTFOLIO</a>
         </li>
           <li class="nav-item">
-            <a class="nav-link" href="/contactme" style="color: beige; font-family: Helvetica; font-weight: bold;">ABOUT ME</a>
+            <a class="nav-link" href="/contactme" [ngStyle]="{'color':currentRoute === '/contactme' ? 'white' : 'lightgrey' }" style=" font-family: Helvetica; font-weight: bold;">ABOUT ME</a>
         </li>
 
           

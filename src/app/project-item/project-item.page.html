@@ -1,42 +1,74 @@
 <app-nav>
 </app-nav>
+
 <ion-content [scrollEvents]="true">
     <br>
-    <div class="container">
+
+    <div class="container" *ngIf="projectObject == undefined">
+        <div class="row">
+            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            </div>
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                <h3 style="text-align: center; color: white;">Oops.</h3>
+                <br>
+                <h4 style="text-align: center; color: white;">The page you are looking for is not found.</h4>
+                <br>
+                <h5 style="text-align: center; color: white;">Please, proceed to home page by clicking on the button
+                    below.</h5>
+                <br>
+                <ion-list style="text-align: center; background-color: #121212; ">
+                    <ion-button [routerLink]="['']" expand="full"
+                        style="color: white; text-align: center; --background: #202020; font-family: Helvetica;">Back to
+                        main</ion-button>
+                </ion-list>
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container" *ngIf="projectObject != undefined">
         <h3 class="h3Text" style="color: white;">{{projectObject.name}}</h3>
         <br>
         <h4 class="h3Text" style="color: white;"> {{projectObject.type}}</h4>
         <h5 class="h3Text" style="color: white;">
             <br>
-            <a href="/portfolio" style="color: lightgray;">Portfolio</a> > <a href = "javascript:void(0)" (click) = "openThis(projectObject.id)" style="color: darkgray; text-decoration: underline;"><b>{{projectObject.name}}</b></a>
-        </h5> 
+            <a href="/portfolio" style="color: lightgray;">Portfolio</a> > <a href="javascript:void(0)"
+                (click)="openThis(projectObject.id)"
+                style="color: darkgray; text-decoration: underline;"><b>{{projectObject.name}}</b></a>
+        </h5>
 
-        <ion-segment value="brief" color="tertiary" scrollable="true" mode="ios" [(ngModel)]="segmentModel"
-            (ionChange)="segmentChanged($event)">
-            <ion-segment-button value="brief" style="--background-checked: #202020">
-                <ion-label style="font-family: Helvetica; font-weight: bold; color: white;">Project Information</ion-label>
+        <ion-segment [(ngModel)]="segmentModel">
+            <ion-segment-button value="brief" style="--color-checked: white;">
+                <ion-label style="font-family: Helvetica; font-weight: bold; color: white; ">Project Detail
+                </ion-label>
             </ion-segment-button>
-            <ion-segment-button value="image">
-                <ion-label style="font-family: Helvetica; font-weight: bold; color: white">Project Images</ion-label>
+            <ion-segment-button value="image" style="--color-checked: white;">
+                <ion-label style="font-family: Helvetica; font-weight: bold; color: white">Project Images
+                </ion-label>
             </ion-segment-button>
-        </ion-segment> 
+        </ion-segment>
 
         <br>
-        <div *ngIf= "segmentModel === 'image'">
-            <div class = "row">
+        <div *ngIf="segmentModel === 'image'">
+            <div class="row">
                 <div class="col-xs col-sm col-md col-lg">
                     <h4 class="h3Text" style="padding-left: 2%; color : white;">Images of Project</h4>
-                    <h5 class="h3Text" style="padding-left: 2%; color : white;">These are some images of the application.</h5>
+                    <h5 class="h3Text" style="padding-left: 2%; color : white;">These are some images of the
+                        application.</h5>
                     <br>
                     <ion-slides [options]="slideOptsOne">
                         <ion-slide *ngFor="let image of projectObject.image">
-                            <div class = "container">
-                            <img src={{image}} style=" width: 100%;
+                            <div class="container">
+                                <img src={{image}} style=" width: 100%;
                             max-width: 500px;
-                            height: auto; padding-top: 10px; padding-bottom: 10px;" *ngIf = "projectObject.type == 'Mobile Application'">
-                            <img src={{image}} style=" width: 100%;
+                            height: auto; padding-top: 10px; padding-bottom: 10px;"
+                                    *ngIf="projectObject.type == 'Mobile Application'">
+                                <img src={{image}} style=" width: 100%;
                             max-width: 700px;
-                            height: auto; padding-top: 10px; padding-bottom: 10px;"*ngIf = "projectObject.type == 'Web Application'">
+                            height: auto; padding-top: 10px; padding-bottom: 10px;"
+                                    *ngIf="projectObject.type == 'Web Application'">
                             </div>
                         </ion-slide>
                     </ion-slides>
@@ -45,7 +77,7 @@
             <br>
 
         </div>
-        <div class="row" *ngIf= "segmentModel === 'brief'">
+        <div class="row" *ngIf="segmentModel === 'brief'">
 
             <div class="col-xs col-sm col-md col-lg">
                 <div class="box">
@@ -66,15 +98,16 @@
 
     </div>
     <br><br><br><br>
-    <div class = "container">
+    <div class="container" *ngIf="projectObject != undefined">
         <div class="row">
-            <h4 class="h3Text" style="padding-left: 2%; padding-right: 2%; color : white;">You may also be interested in</h4>
+            <h4 class="h3Text" style="padding-left: 2%; padding-right: 2%; color : white;">You may also be interested in
+            </h4>
         </div>
         <div class="row">
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" *ngFor="let projects of projectArray">
                 <ion-card>
                     <ion-card-header>
-                        <ion-card-title class="title"><b style = "color: white;">{{projects.name}}</b></ion-card-title>
+                        <ion-card-title class="title"><b style="color: white;">{{projects.name}}</b></ion-card-title>
                     </ion-card-header>
                     <ion-card-content>
                         <ion-button expand="full" (click)="openNew(projects.id)" style="--background: #121212;">
@@ -86,7 +119,7 @@
         </div>
     </div>
     <div id="page-container">
-      <app-footer>
-      </app-footer>
+        <app-footer>
+        </app-footer>
     </div>
 </ion-content>

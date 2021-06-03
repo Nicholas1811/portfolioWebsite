@@ -9,7 +9,7 @@ export class Tab3Page {
 
   constructor() {}
   openEmail(){
-    window.location.href = "mailto:1907761I@student.tp.edu.sg";
+    window.location.href = "mailto:nicholassdl660@gmail.com";
   }
   openLinkedin(){
     window.open("https://www.linkedin.com/in/nicholas-soh-6b55ab171/")

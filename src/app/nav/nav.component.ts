@@ -8,8 +8,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent implements OnInit {
-
-  constructor(private router: Router) { }
+  currentRoute;
+  constructor(private router: Router) {   
+console.log(this.router.url)
+this.currentRoute = this.router.url
+}
 
   ngOnInit() {}
   toRouter(){

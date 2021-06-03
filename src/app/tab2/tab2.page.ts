@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Router, NavigationExtras } from '@angular/router';
-import { ProjectsService } from '../projects.service'
 
 @Component({
   selector: 'app-tab2',
@@ -9,7 +8,7 @@ import { ProjectsService } from '../projects.service'
 })
 export class Tab2Page {
 
-  constructor(private router: Router, private projectsService: ProjectsService) {}
+  constructor(private router: Router) {}
 projectItem(str){
   let navigationExtras: NavigationExtras = { 
     queryParams: { 

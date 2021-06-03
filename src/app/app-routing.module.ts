@@ -16,8 +16,19 @@ const routes: Routes = [
   },
   {
     path: 'portfolio/project-item',
-    loadChildren: () => import('./project-item/project-item.module').then( m => m.ProjectItemPageModule)
+    loadChildren: () => import('./project-item/project-item.module').then(m => m.ProjectItemPageModule)
+  },
+  //add page.
+  {
+    path: '**',
+    redirectTo: 'error-page',
+    pathMatch: 'full'
+  },
+  {
+    path: 'error-page',
+    loadChildren: () => import('./error-page/error-page.module').then( m => m.ErrorPagePageModule)
   }
+
 ];
 @NgModule({
   imports: [
@@ -25,4 +36,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

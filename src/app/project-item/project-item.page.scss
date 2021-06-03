@@ -33,3 +33,10 @@ ion-card{
 ion-content{
     --background: #121212;
 }
+
+  ion-segment {
+    --background: #202020;
+  }
+  ion-segment-button{
+      text-transform: none;
+  }

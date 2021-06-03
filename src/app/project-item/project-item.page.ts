@@ -83,25 +83,25 @@ export class ProjectItemPage implements OnInit {
             image: ["../../assets/CDEV1.png",
               "../../assets/CDEV2.png",
               "../../assets/CDEV3.png",
-              "../../assets/CDEV4.png"
+              "../../assets/CDEV4.png",
+              "../../assets/CDEV5.png"
             ]
           },
 
         ]
-        for (let i = 0; i < this.projectArray.length; i++) {
-          if (this.projectArray[i].id == this.data) {
-            this.projectObject = this.projectArray[i]
+          for (let i = 0; i < this.projectArray.length; i++) {
+            if (this.projectArray[i].id == this.data) {
+              this.projectObject = this.projectArray[i]
+            }
           }
-        }
-        for (let a = 0 ; a < this.projectArray.length; a++){
-          if(this.projectArray[a].id == this.data){
-            const index = this.projectArray.indexOf(this.projectArray[a]);
-            this.projectArray.splice(index, 1)
+          for (let a = 0 ; a < this.projectArray.length; a++){
+            if(this.projectArray[a].id == this.data){
+              const index = this.projectArray.indexOf(this.projectArray[a]);
+              this.projectArray.splice(index, 1)
+            }
           }
-        }
-
-        console.log(this.projectArray)
       }
+    
     });
 
   }
